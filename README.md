@@ -1,2 +1,2 @@
-<a> https://n-andz.github.io/portfolio/ </a>
+<a target= "" href="https://n-andz.github.io/portfolio/"> Portflio Live Link </a>
 
