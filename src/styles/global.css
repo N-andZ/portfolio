@@ -1,3 +1,10 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+
 .background-radial-black {
   background: radial-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.521));
 }
