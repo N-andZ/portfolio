@@ -2,7 +2,7 @@ import React from 'react';
 
 function TechnologyAttributes ({name}:{name?:string}){
     return(
-        <div className=' text-black default-text-roboto-smaller bg-white px-5 py-2 rounded-full'>
+        <div id="tech-card" className=' text-black default-text-roboto-smaller bg-white px-5 py-2 rounded-full'>
            {name}
         </div>
     );
