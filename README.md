@@ -1,2 +1,2 @@
-<a href="#" onclick='window.open("http://www.foracure.org.au");return false;' > Portfolio Live Link </a>
+<a href="https://n-andz.github.io/portfolio/"> Portfolio Live Link </a>
 
