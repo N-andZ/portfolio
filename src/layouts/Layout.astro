@@ -1,0 +1,90 @@
+---
+import SocialMediaIcons from "../components/SocialMediaIconComponent";
+import ContactForm from '../components/ContactForm';
+import { ViewTransitions } from 'astro:transitions';
+import AnimatedCursor from "react-animated-cursor"
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+const menuLinks = [
+    {
+        title: "Home",
+        link: "/"
+    }, {
+        title: "Projects",
+        link: "/projects"
+    }, {
+        title: "Contact",
+        link: "#contact"
+    }
+]
+---
+<ViewTransitions/>
+
+<!doctype html>
+<html lang="en">
+	<head>
+		
+        <link rel="stylesheet" href="src/styles/global.css">
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Quattrocento:wght@400;700&family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+	</head>
+	<body>
+
+
+		<div id="background-styling" class="p-12 min-w-[750px]">
+		<div id=""class="">
+			<div class=" items-center flex flex-row justify-between">
+				<div>
+					<SocialMediaIcons
+						sSocialType="github"
+						anySocialLink= ""
+						className=" w-20 h-20 bg-black p-3 rounded-full"
+					/>
+				</div>
+				<div class=" flex flex-col justify-end">
+					<h1 class=" m-0 p-0 text-[150px]">&Z Dev</h1>
+					<h2 class=" m-0 p-0 text-[40px]">Software Engineer</h2>
+
+				</div>
+			</div>
+
+			<nav class="flex flex-row gap-1">
+				{menuLinks.map((item)=>(
+                   <a href={item.link}><div class=" default-text p-3 border border-solid border-white filter-bw background-radial-black">{item.title}</div></a>
+                ))}
+            </nav>
+           
+		</div>
+        <main class=" mt-10">
+			<div class=" border border-solid border-white p-4 background-radial-black filter-bw min-h-[450px] max-h-[450px]">
+				<div class=" flex flex-col justify-start">
+
+					<slot transition:animate="fade" />
+				</div>
+			</div>
+        </main>
+	</div>
+	<div id="contact" class=" min-w-[750px] w-full h-screen">
+		
+		<div class="flex flex-col items-center justify-center h-full">
+			<ContactForm/>
+		
+		</div>
+	</div>
+	</body>
+</html>
+
+
+
